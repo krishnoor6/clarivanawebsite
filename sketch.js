@@ -5,9 +5,6 @@ let currentUserPlan = 'free';
 let scanCount = 0;
 let analysisCount = 0;
 
-const GEMINI_API_KEY = "AIzaSyB1nyO2c9At8GfKNYFAOjCQeLC0MZ4VDTk";
-const MODEL = "gemini-1.5-flash";
-
 fetch('ingredients_pro_mode.json')
   .then(r => r.json())
   .then(data => harmfulIngredientsData = data.harmfulIngredients || {})
