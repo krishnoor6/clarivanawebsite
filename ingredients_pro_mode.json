@@ -1,0 +1,734 @@
+{
+  "harmfulIngredients": [
+    {
+      "id": "aspartame",
+      "name": "Aspartame",
+      "aliases": ["E951", "NutraSweet", "Equal"],
+      "category": "Artificial Sweetener",
+      "riskLevel": "High",
+      "description": "Aspartame is a synthetic sweetener 200x sweeter than sugar. In 2023, the WHO's IARC classified it as possibly carcinogenic to humans (Group 2B), triggering global regulatory review.",
+      "toxicity": { "acute": "Low", "chronic": "High" },
+      "regulatoryStatus": {
+        "FDA": "Approved with ADI of 50mg/kg body weight",
+        "EU": "Approved (E951) with ADI of 40mg/kg body weight",
+        "WHO/IARC": "Classified as possibly carcinogenic (Group 2B, 2023)",
+        "JECFA": "ADI maintained but under continued review"
+      },
+      "healthEffects": [
+        { "type": "Neurological", "effect": "May cause headaches, dizziness, and mood changes in sensitive individuals" },
+        { "type": "Carcinogenicity", "effect": "IARC Group 2B: possibly carcinogenic to humans based on limited evidence for hepatocellular carcinoma" },
+        { "type": "Metabolic", "effect": "Metabolized to phenylalanine, aspartic acid, and methanol — toxic at very high doses" }
+      ],
+      "references": [
+        "https://www.iarc.who.int/news-events/iarc-monographs-evaluate-the-carcinogenicity-of-aspartame/",
+        "https://www.who.int/news/item/14-07-2023-aspartame-hazard-and-risk-assessment-results-released",
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Aspartame"
+      ]
+    },
+    {
+      "id": "sucralose",
+      "name": "Sucralose",
+      "aliases": ["E955", "Splenda"],
+      "category": "Artificial Sweetener",
+      "riskLevel": "Moderate",
+      "description": "Sucralose is a chlorinated sugar derivative 600x sweeter than sucrose. Emerging research raises concerns about gut microbiome disruption and thermal degradation products.",
+      "toxicity": { "acute": "Low", "chronic": "Moderate" },
+      "regulatoryStatus": {
+        "FDA": "Generally Recognized as Safe (GRAS)",
+        "EU": "Approved (E955) with ADI of 15mg/kg body weight",
+        "EFSA": "Approved; gut microbiome effects under review"
+      },
+      "healthEffects": [
+        { "type": "Gastrointestinal", "effect": "Shown to disrupt gut microbiota composition in clinical human studies" },
+        { "type": "Metabolic", "effect": "May impair glucose tolerance and insulin response with regular high consumption" },
+        { "type": "Thermal Degradation", "effect": "Releases potentially toxic chlorinated compounds (chloropropanols) when heated above 120°C" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Sucralose",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5522834/",
+        "https://www.efsa.europa.eu/en/efsajournal/pub/3909"
+      ]
+    },
+    {
+      "id": "saccharin",
+      "name": "Saccharin",
+      "aliases": ["E954", "Sweet'N Low", "sodium saccharin"],
+      "category": "Artificial Sweetener",
+      "riskLevel": "Moderate",
+      "description": "Saccharin is one of the oldest artificial sweeteners. It was previously listed as a potential carcinogen but delisted in 2000. However, recent studies show gut microbiome disruption.",
+      "toxicity": { "acute": "Low", "chronic": "Moderate" },
+      "regulatoryStatus": {
+        "FDA": "Approved; removed from carcinogen list in 2000",
+        "EU": "Approved (E954) with ADI of 5mg/kg body weight",
+        "IARC": "Previously Group 2B; now Group 3 (not classifiable)"
+      },
+      "healthEffects": [
+        { "type": "Carcinogenicity", "effect": "Caused bladder cancer in male rats at high doses; mechanism not applicable to humans per current science" },
+        { "type": "Metabolic", "effect": "May alter gut bacteria and impair glucose tolerance; Israeli study (Nature 2014) showed glucose intolerance induction" },
+        { "type": "Allergic", "effect": "Sulfonamide-based structure may cause reactions in sulfa drug-sensitive individuals" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Saccharin",
+        "https://www.nature.com/articles/nature13793",
+        "https://www.cancer.gov/about-cancer/causes-prevention/risk/diet/artificial-sweeteners-fact-sheet"
+      ]
+    },
+    {
+      "id": "red_40",
+      "name": "Red 40",
+      "aliases": ["Allura Red AC", "FD&C Red No. 40", "E129"],
+      "category": "Synthetic Food Dye",
+      "riskLevel": "Moderate",
+      "description": "Red 40 is the most widely used food dye in the USA. A landmark 2007 Lancet study linked it to hyperactivity in children, prompting mandatory EU warning labels.",
+      "toxicity": { "acute": "Low", "chronic": "Moderate" },
+      "regulatoryStatus": {
+        "FDA": "Approved; under review for pediatric behavioral effects",
+        "EU": "Approved (E129) with mandatory warning label: 'may have an adverse effect on activity and attention in children'",
+        "California": "AB 2316 (2024) requires warning labels on school foods"
+      },
+      "healthEffects": [
+        { "type": "Behavioral", "effect": "Linked to hyperactivity and attention deficits in children in the McCann et al. Lancet 2007 study" },
+        { "type": "Allergic", "effect": "May cause hives, asthma, and anaphylaxis in sensitive individuals" },
+        { "type": "Carcinogenicity", "effect": "2022 Nature Communications study linked it to intestinal inflammation and colitis in animal models" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Allura-Red-AC",
+        "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(07)61306-3/fulltext",
+        "https://www.nature.com/articles/s41467-022-35309-y"
+      ]
+    },
+    {
+      "id": "yellow_5",
+      "name": "Yellow 5",
+      "aliases": ["Tartrazine", "FD&C Yellow No. 5", "E102"],
+      "category": "Synthetic Food Dye",
+      "riskLevel": "Moderate",
+      "description": "Tartrazine (Yellow 5) is a petroleum-derived azo dye. It is one of six dyes implicated in the McCann et al. 2007 Lancet study linking food dyes to hyperactivity in children.",
+      "toxicity": { "acute": "Low", "chronic": "Moderate" },
+      "regulatoryStatus": {
+        "FDA": "Approved; requires disclosure on labels",
+        "EU": "Approved (E102) with mandatory hyperactivity warning label",
+        "Norway": "Previously banned; now permitted under EU rules"
+      },
+      "healthEffects": [
+        { "type": "Behavioral", "effect": "Linked to hyperactivity in children; requires EU warning label" },
+        { "type": "Allergic", "effect": "May trigger urticaria, rhinitis, and asthma especially in aspirin-sensitive individuals" },
+        { "type": "Cross-Reactivity", "effect": "Cross-reacts with aspirin in approximately 10% of aspirin-sensitive patients" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Tartrazine",
+        "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(07)61306-3/fulltext",
+        "https://www.efsa.europa.eu/en/efsajournal/pub/2106"
+      ]
+    },
+    {
+      "id": "yellow_6",
+      "name": "Yellow 6",
+      "aliases": ["Sunset Yellow FCF", "FD&C Yellow No. 6", "E110"],
+      "category": "Synthetic Food Dye",
+      "riskLevel": "Moderate",
+      "description": "Yellow 6 (Sunset Yellow) is a petroleum-derived azo dye. Animal studies revealed adrenal tumors at very high doses, and it is one of six dyes with EU hyperactivity warning requirements.",
+      "toxicity": { "acute": "Low", "chronic": "Moderate" },
+      "regulatoryStatus": {
+        "FDA": "Approved with permitted use levels",
+        "EU": "Approved (E110) with mandatory hyperactivity warning label",
+        "Norway": "Previously banned"
+      },
+      "healthEffects": [
+        { "type": "Behavioral", "effect": "Requires EU hyperactivity warning label based on McCann et al. 2007 Lancet study" },
+        { "type": "Allergic", "effect": "May cause skin rashes, nasal congestion, and allergic reactions" },
+        { "type": "Animal Carcinogenicity", "effect": "Adrenal gland tumors observed in male rats at very high experimental doses" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Sunset-Yellow-FCF",
+        "https://www.efsa.europa.eu/en/efsajournal/pub/2385",
+        "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(07)61306-3/fulltext"
+      ]
+    },
+    {
+      "id": "sodium_benzoate",
+      "name": "Sodium Benzoate",
+      "aliases": ["E211", "benzoate of soda"],
+      "category": "Preservative",
+      "riskLevel": "High",
+      "description": "Sodium benzoate is a widely used preservative that can react with Vitamin C in beverages to form benzene, a Group 1 IARC carcinogen. It is also linked to ADHD in children.",
+      "toxicity": { "acute": "Low", "chronic": "High" },
+      "regulatoryStatus": {
+        "FDA": "Approved at up to 0.1% in foods",
+        "EU": "Approved (E211) with restrictions",
+        "IARC": "Benzene formed from it is Group 1 carcinogen"
+      },
+      "healthEffects": [
+        { "type": "Carcinogenicity", "effect": "Reacts with Vitamin C (ascorbic acid) to form benzene — a confirmed Group 1 IARC human carcinogen" },
+        { "type": "Behavioral", "effect": "Linked to hyperactivity in children in McCann et al. Lancet 2007 landmark study" },
+        { "type": "Metabolic", "effect": "Depletes glycine in liver, potentially stressing mitochondrial function at high intake levels" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Sodium-benzoate",
+        "https://www.fda.gov/food/food-additives-petitions/sodium-benzoate",
+        "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(07)61306-3/fulltext"
+      ]
+    },
+    {
+      "id": "potassium_bromate",
+      "name": "Potassium Bromate",
+      "aliases": ["E924", "bromate"],
+      "category": "Flour Improver",
+      "riskLevel": "High",
+      "description": "Potassium bromate is a flour-strengthening agent classified as possibly carcinogenic (IARC Group 2B). It is banned in the EU, UK, Canada, Brazil, and China but remains legal in the USA.",
+      "toxicity": { "acute": "Moderate", "chronic": "High" },
+      "regulatoryStatus": {
+        "FDA": "Permitted in USA; listed as safe if fully converted during baking",
+        "EU": "Banned since 1990",
+        "UK/Canada/Brazil/China": "Banned",
+        "IARC": "Group 2B: possibly carcinogenic to humans"
+      },
+      "healthEffects": [
+        { "type": "Carcinogenicity", "effect": "IARC Group 2B: caused kidney, thyroid, and gastrointestinal tumors in animal studies" },
+        { "type": "Renal", "effect": "Acute poisoning causes kidney failure, hearing loss, and neurological damage" },
+        { "type": "Genotoxicity", "effect": "Damages DNA through oxidative mechanisms; produces 8-hydroxydeoxyguanosine lesions" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Potassium-bromate",
+        "https://monographs.iarc.who.int/list-of-classifications/",
+        "https://www.canada.ca/en/health-canada/services/food-nutrition/food-safety/food-additives.html"
+      ]
+    },
+    {
+      "id": "titanium_dioxide",
+      "name": "Titanium Dioxide",
+      "aliases": ["E171", "TiO2"],
+      "category": "Color Additive / Whitener",
+      "riskLevel": "High",
+      "description": "Titanium dioxide (E171) was banned as a food additive in the EU in 2022 after EFSA found it could not be excluded as a genotoxic carcinogen. Still permitted in the USA.",
+      "toxicity": { "acute": "Low", "chronic": "High" },
+      "regulatoryStatus": {
+        "FDA": "Generally Recognized as Safe (GRAS) — under review",
+        "EU": "Banned as food additive since August 2022",
+        "EFSA": "Safety approval withdrawn in 2021; cannot exclude genotoxic potential",
+        "IARC": "Group 2B (inhaled nanoparticles)"
+      },
+      "healthEffects": [
+        { "type": "Genotoxicity", "effect": "EFSA found it may damage DNA; genotoxicity cannot be excluded at food-additive doses" },
+        { "type": "Carcinogenicity", "effect": "IARC Group 2B for inhaled particles; food-grade nanoparticle risk under investigation" },
+        { "type": "Intestinal", "effect": "Nanoparticles may accumulate in intestinal tissue and impair gut immune response" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Titanium-dioxide",
+        "https://www.efsa.europa.eu/en/news/titanium-dioxide-e171-no-longer-considered-safe-when-used-food-additive",
+        "https://www.iarc.who.int/"
+      ]
+    },
+    {
+      "id": "azodicarbonamide",
+      "name": "Azodicarbonamide",
+      "aliases": ["ADA", "E927a"],
+      "category": "Flour Bleaching Agent / Dough Conditioner",
+      "riskLevel": "High",
+      "description": "Azodicarbonamide is a flour bleaching agent that breaks down into semicarbazide and urethane during baking — both animal carcinogens. Banned in EU and Australia; permitted in USA at 45ppm.",
+      "toxicity": { "acute": "Low", "chronic": "High" },
+      "regulatoryStatus": {
+        "FDA": "Permitted up to 45ppm in flour",
+        "EU": "Banned since 2005",
+        "Australia/New Zealand": "Banned",
+        "WHO": "Flagged as occupational respiratory hazard"
+      },
+      "healthEffects": [
+        { "type": "Carcinogenicity", "effect": "Breaks down to semicarbazide (animal carcinogen) and urethane (IARC Group 2A carcinogen) during baking" },
+        { "type": "Respiratory", "effect": "WHO identified as occupational asthma trigger; workers exposed to dust develop respiratory sensitization" },
+        { "type": "Regulatory", "effect": "Banned in 30+ countries; EU prohibition was preceded by EFSA safety review in 2005" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Azodicarbonamide",
+        "https://www.efsa.europa.eu/en/efsajournal/pub/214",
+        "https://www.who.int/publications/i/item/9789241572439"
+      ]
+    },
+    {
+      "id": "bha",
+      "name": "Butylated Hydroxyanisole (BHA)",
+      "aliases": ["BHA", "E320"],
+      "category": "Synthetic Antioxidant / Preservative",
+      "riskLevel": "High",
+      "description": "BHA is a synthetic antioxidant preservative. IARC classifies it as possibly carcinogenic (Group 2B), and it is listed as reasonably anticipated to be a human carcinogen by the US National Toxicology Program.",
+      "toxicity": { "acute": "Low", "chronic": "High" },
+      "regulatoryStatus": {
+        "FDA": "Generally Recognized as Safe (GRAS)",
+        "EU": "Approved (E320) with strict limits",
+        "NTP": "Reasonably anticipated to be a human carcinogen",
+        "IARC": "Group 2B: possibly carcinogenic to humans"
+      },
+      "healthEffects": [
+        { "type": "Carcinogenicity", "effect": "Caused forestomach tumors in rats, mice, and hamsters; IARC Group 2B classification" },
+        { "type": "Endocrine Disruption", "effect": "Exhibits estrogenic activity in cell-based assays; may disrupt hormone signaling" },
+        { "type": "Immunotoxicity", "effect": "May alter immune function and promote tumor progression at subcarcinogenic doses" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Butylated-hydroxyanisole",
+        "https://ntp.niehs.nih.gov/ntp/roc/content/profiles/butylatedhydroxyanisole.pdf",
+        "https://monographs.iarc.who.int/list-of-classifications/"
+      ]
+    },
+    {
+      "id": "bht",
+      "name": "Butylated Hydroxytoluene (BHT)",
+      "aliases": ["BHT", "E321"],
+      "category": "Synthetic Antioxidant / Preservative",
+      "riskLevel": "Moderate",
+      "description": "BHT is a synthetic antioxidant with mixed safety evidence. It shows tumor-promoting activity in some animal studies but anticarcinogenic effects in others, making its risk profile complex.",
+      "toxicity": { "acute": "Low", "chronic": "Moderate" },
+      "regulatoryStatus": {
+        "FDA": "Generally Recognized as Safe (GRAS)",
+        "EU": "Approved (E321) with quantity limits",
+        "IARC": "Group 3: not classifiable as carcinogenic"
+      },
+      "healthEffects": [
+        { "type": "Carcinogenicity", "effect": "Acts as tumor promoter in some animal models; anticarcinogenic in others depending on dose and timing" },
+        { "type": "Endocrine", "effect": "May affect thyroid hormone levels and act as weak endocrine disruptor" },
+        { "type": "Hepatotoxicity", "effect": "Liver enlargement and enzyme induction observed in rodents at high doses" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Butylated-hydroxytoluene",
+        "https://www.efsa.europa.eu/en/efsajournal/pub/4837",
+        "https://monographs.iarc.who.int/list-of-classifications/"
+      ]
+    },
+    {
+      "id": "carrageenan",
+      "name": "Carrageenan",
+      "aliases": ["E407", "Irish moss extract"],
+      "category": "Thickener / Emulsifier",
+      "riskLevel": "Moderate",
+      "description": "Carrageenan is extracted from red seaweed and used as a thickener. Its degraded form (poligeenan) is carcinogenic; concern exists about whether stomach acid degrades food-grade carrageenan.",
+      "toxicity": { "acute": "Low", "chronic": "Moderate" },
+      "regulatoryStatus": {
+        "FDA": "Generally Recognized as Safe (GRAS)",
+        "EU": "Approved (E407); not permitted in infant formula",
+        "USDA Organic": "Removed from permitted substances list in 2018",
+        "IARC": "Degraded carrageenan: Group 2B"
+      },
+      "healthEffects": [
+        { "type": "Inflammatory", "effect": "Triggers intestinal inflammation and worsens inflammatory bowel disease markers in animal models" },
+        { "type": "Carcinogenicity", "effect": "Degraded form (poligeenan) is IARC Group 2B; acidic stomach environment may cause partial degradation" },
+        { "type": "Gut Health", "effect": "Shown to alter microbiome composition and increase intestinal permeability in mouse studies" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Carrageenan",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4420010/",
+        "https://monographs.iarc.who.int/list-of-classifications/"
+      ]
+    },
+    {
+      "id": "sodium_nitrite",
+      "name": "Sodium Nitrite",
+      "aliases": ["E250", "NaNO2"],
+      "category": "Preservative / Curing Agent",
+      "riskLevel": "High",
+      "description": "Sodium nitrite is used to preserve processed meats. It forms carcinogenic nitrosamines when heated with amines. IARC classifies processed meat consumption as a Group 1 carcinogen.",
+      "toxicity": { "acute": "Moderate", "chronic": "High" },
+      "regulatoryStatus": {
+        "FDA": "Approved at up to 200ppm in cured meats",
+        "EU": "Approved (E250) with quantity limits",
+        "IARC": "Processed meats containing it: Group 1 carcinogen (2015)"
+      },
+      "healthEffects": [
+        { "type": "Carcinogenicity", "effect": "Forms N-nitrosamines with meat amines during cooking — IARC classifies processed meats as Group 1 carcinogens" },
+        { "type": "Colorectal Cancer", "effect": "Each 50g/day of processed meat increases colorectal cancer risk by 18% per IARC 2015 review of 800 studies" },
+        { "type": "Methemoglobinemia", "effect": "High doses cause methemoglobinemia — reduced oxygen-carrying capacity of blood; especially dangerous in infants" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Sodium-nitrite",
+        "https://www.iarc.who.int/wp-content/uploads/2018/07/pr240_E.pdf",
+        "https://www.fda.gov/food/food-additives-petitions/sodium-nitrite"
+      ]
+    },
+    {
+      "id": "high_fructose_corn_syrup",
+      "name": "High Fructose Corn Syrup",
+      "aliases": ["HFCS", "glucose-fructose syrup", "isoglucose"],
+      "category": "Sweetener",
+      "riskLevel": "High",
+      "description": "HFCS is a processed sweetener with higher fructose content than regular corn syrup. Its fructose component bypasses normal glucose metabolism and is directly linked to fatty liver disease, obesity, and metabolic syndrome.",
+      "toxicity": { "acute": "Low", "chronic": "High" },
+      "regulatoryStatus": {
+        "FDA": "Generally Recognized as Safe (GRAS)",
+        "EU": "Permitted with production quotas (called isoglucose)",
+        "WHO": "Recommends reducing free sugar intake to <10% of daily calories"
+      },
+      "healthEffects": [
+        { "type": "Hepatic", "effect": "Fructose is exclusively metabolized in liver; excess directly causes non-alcoholic fatty liver disease (NAFLD)" },
+        { "type": "Metabolic", "effect": "Does not stimulate insulin or leptin, bypassing satiety signals and promoting overconsumption" },
+        { "type": "Cardiovascular", "effect": "Elevates triglycerides and LDL cholesterol more than equivalent glucose intake" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/High-fructose-corn-syrup",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2991323/",
+        "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight"
+      ]
+    },
+    {
+      "id": "propylparaben",
+      "name": "Propylparaben",
+      "aliases": ["E217", "propyl 4-hydroxybenzoate"],
+      "category": "Preservative",
+      "riskLevel": "High",
+      "description": "Propylparaben is a preservative classified as an endocrine disruptor. It mimics estrogen and has been linked to reproductive toxicity. Banned in Denmark for foods targeting children under 3.",
+      "toxicity": { "acute": "Low", "chronic": "High" },
+      "regulatoryStatus": {
+        "FDA": "Generally Recognized as Safe (GRAS) at permitted levels",
+        "EU": "Permitted (E217) with restrictions; banned in infant foods",
+        "Denmark": "Banned in foods for children under 3 years",
+        "EFSA": "ADI reduced to 0-0.25mg/kg/day; endocrine effects concern"
+      },
+      "healthEffects": [
+        { "type": "Endocrine Disruption", "effect": "Mimics estrogen in hormone receptor binding assays; disrupts normal hormonal signaling" },
+        { "type": "Reproductive Toxicity", "effect": "Reduces sperm count and testosterone levels in male rodents at relevant exposure levels" },
+        { "type": "Breast Cancer Risk", "effect": "Detected in human breast tumor tissue; promotes estrogen-receptor-positive cancer cell proliferation" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Propylparaben",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3421484/",
+        "https://www.efsa.europa.eu/en/efsajournal/pub/3828"
+      ]
+    },
+    {
+      "id": "tbhq",
+      "name": "TBHQ (Tert-Butylhydroquinone)",
+      "aliases": ["TBHQ", "t-butylhydroquinone", "E319"],
+      "category": "Synthetic Antioxidant / Preservative",
+      "riskLevel": "Moderate",
+      "description": "TBHQ is a synthetic antioxidant used to extend shelf life of processed foods. A 2020 NIH-funded study found it may impair immune response to influenza vaccines and infections.",
+      "toxicity": { "acute": "Low", "chronic": "Moderate" },
+      "regulatoryStatus": {
+        "FDA": "Permitted at up to 0.02% of fat content",
+        "EU": "Approved (E319) with ADI of 0-0.7mg/kg body weight",
+        "EFSA": "Recommends reduced acceptable daily intake"
+      },
+      "healthEffects": [
+        { "type": "Immunosuppression", "effect": "2020 EWG/NIH study found TBHQ may impair immune response to influenza and other pathogens" },
+        { "type": "Carcinogenicity", "effect": "Precancerous stomach tumors observed in animal studies at high doses" },
+        { "type": "Vision", "effect": "High doses caused vision disturbances in human poisoning case reports" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Tert-butylhydroquinone",
+        "https://www.ewg.org/research/tbhq",
+        "https://www.efsa.europa.eu/en/efsajournal/pub/5625"
+      ]
+    },
+    {
+      "id": "brominated_vegetable_oil",
+      "name": "Brominated Vegetable Oil",
+      "aliases": ["BVO"],
+      "category": "Emulsifier / Stabilizer",
+      "riskLevel": "High",
+      "description": "Brominated vegetable oil keeps citrus flavoring suspended in beverages. Bromine accumulates in body fat and thyroid tissue. FDA proposed revoking its GRAS status in 2023.",
+      "toxicity": { "acute": "Low", "chronic": "High" },
+      "regulatoryStatus": {
+        "FDA": "GRAS status revocation proposed in 2023",
+        "EU": "Banned",
+        "Japan": "Banned",
+        "India": "Banned"
+      },
+      "healthEffects": [
+        { "type": "Endocrine Disruption", "effect": "Bromine accumulates in thyroid tissue and displaces iodine, causing thyroid hormone disruption" },
+        { "type": "Neurological", "effect": "Excess intake linked to memory loss, headaches, fatigue, and skin lesions in case reports" },
+        { "type": "Bioaccumulation", "effect": "Organobromines persist in body fat; serum levels detectable months after exposure ceases" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Brominated-vegetable-oil",
+        "https://www.fda.gov/food/food-additives-petitions/fda-proposes-to-revoke-authorization-brominated-vegetable-oil",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4816537/"
+      ]
+    },
+    {
+      "id": "diacetyl",
+      "name": "Diacetyl",
+      "aliases": ["2,3-butanedione", "E365 (related)"],
+      "category": "Artificial Butter Flavoring",
+      "riskLevel": "High",
+      "description": "Diacetyl is a butter-flavoring chemical that causes obliterative bronchiolitis ('popcorn lung') — an irreversible obstructive lung disease. NIOSH identified it as causing occupational lung disease.",
+      "toxicity": { "acute": "Moderate (inhalation)", "chronic": "High" },
+      "regulatoryStatus": {
+        "FDA": "GRAS for oral consumption; occupational inhalation risk recognized",
+        "NIOSH": "Identified as hazardous; recommended exposure limits issued",
+        "OSHA": "Recommended permissible exposure limit of 0.02ppm"
+      },
+      "healthEffects": [
+        { "type": "Pulmonary", "effect": "Causes obliterative bronchiolitis ('popcorn lung') — irreversible scarring of small airways" },
+        { "type": "Occupational Hazard", "effect": "NIOSH linked it to severe lung disease in microwave popcorn factory workers" },
+        { "type": "Airway Damage", "effect": "Damages bronchiolar epithelial cells at low airborne concentrations with repeated exposure" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Diacetyl",
+        "https://www.cdc.gov/niosh/topics/flavorings/exposure.html",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2796751/"
+      ]
+    },
+    {
+      "id": "acrylamide",
+      "name": "Acrylamide",
+      "aliases": ["2-propenamide"],
+      "category": "Heat-Formed Process Contaminant",
+      "riskLevel": "High",
+      "description": "Acrylamide forms naturally in starchy foods during high-temperature cooking (frying, baking, roasting) via the Maillard reaction. IARC classifies it as probably carcinogenic (Group 2A).",
+      "toxicity": { "acute": "Moderate", "chronic": "High" },
+      "regulatoryStatus": {
+        "FDA": "Guidance issued to reduce acrylamide in food processing",
+        "EU": "Regulation 2017/2158 sets benchmark levels for acrylamide in foods",
+        "IARC": "Group 2A: probably carcinogenic to humans",
+        "EFSA": "Identified as public health concern; margin of exposure too low for comfort"
+      },
+      "healthEffects": [
+        { "type": "Carcinogenicity", "effect": "IARC Group 2A: metabolized to glycidamide, a direct DNA-reactive genotoxic carcinogen" },
+        { "type": "Neurological", "effect": "Occupational exposure causes peripheral neuropathy; food exposure effects under study" },
+        { "type": "Reproductive", "effect": "Shown to cause reproductive toxicity and reduce fertility in animal studies" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Acrylamide",
+        "https://monographs.iarc.who.int/list-of-classifications/",
+        "https://www.efsa.europa.eu/en/efsajournal/pub/4104"
+      ]
+    },
+    {
+      "id": "phosphoric_acid",
+      "name": "Phosphoric Acid",
+      "aliases": ["E338", "orthophosphoric acid"],
+      "category": "Acidulant",
+      "riskLevel": "Moderate",
+      "description": "Phosphoric acid is used in cola drinks as an acidulant. Regular high consumption is linked to reduced bone mineral density and increased kidney disease risk by disrupting the calcium-phosphorus balance.",
+      "toxicity": { "acute": "Low", "chronic": "Moderate" },
+      "regulatoryStatus": {
+        "FDA": "Generally Recognized as Safe (GRAS)",
+        "EU": "Approved (E338) with quantity limits",
+        "EFSA": "ADI 'not specified' — safe at normal dietary levels"
+      },
+      "healthEffects": [
+        { "type": "Bone Health", "effect": "Regular cola consumption linked to lower bone mineral density; may displace calcium from bone matrix" },
+        { "type": "Renal", "effect": "Associated with kidney stone formation and increased risk of chronic kidney disease with heavy intake" },
+        { "type": "Dental", "effect": "Erodes tooth enamel with regular consumption; pH of 2.8 in cola drinks" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Phosphoric-acid",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2669834/",
+        "https://www.efsa.europa.eu/en/efsajournal/pub/2798"
+      ]
+    },
+    {
+      "id": "sodium_lauryl_sulfate",
+      "name": "Sodium Lauryl Sulfate",
+      "aliases": ["SLS", "sodium dodecyl sulfate", "E487"],
+      "category": "Surfactant / Emulsifier",
+      "riskLevel": "Moderate",
+      "description": "SLS is a surfactant and detergent used in toothpaste, shampoos, and some processed foods. Clinical studies link it to increased canker sore frequency and mucosal irritation.",
+      "toxicity": { "acute": "Low", "chronic": "Moderate" },
+      "regulatoryStatus": {
+        "FDA": "Generally Recognized as Safe (GRAS) for food use",
+        "EU": "Permitted in food and cosmetics with restrictions",
+        "GHS Classification": "Skin Irritant Category 2, Eye Irritant Category 2"
+      },
+      "healthEffects": [
+        { "type": "Mucosal Irritation", "effect": "Clinical studies show SLS-free toothpaste significantly reduces canker sore (aphthous ulcer) recurrence" },
+        { "type": "Skin Irritation", "effect": "Disrupts skin lipid barrier; classified as GHS Skin Irritant; causes contact dermatitis" },
+        { "type": "Systemic", "effect": "Can penetrate skin and accumulate in organs including eyes, brain, and liver with repeated exposure" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Sodium-lauryl-sulfate",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4111151/",
+        "https://www.fda.gov/cosmetics/cosmetic-ingredients/sodium-lauryl-sulfate"
+      ]
+    },
+    {
+      "id": "polysorbate_80",
+      "name": "Polysorbate 80",
+      "aliases": ["E433", "Tween 80"],
+      "category": "Emulsifier",
+      "riskLevel": "Moderate",
+      "description": "Polysorbate 80 is a widely used emulsifier. A landmark 2015 Nature study found it disrupts the intestinal microbiota and promotes inflammation and metabolic syndrome in mice.",
+      "toxicity": { "acute": "Low", "chronic": "Moderate" },
+      "regulatoryStatus": {
+        "FDA": "Generally Recognized as Safe (GRAS)",
+        "EU": "Approved (E433) with ADI of 25mg/kg body weight",
+        "EFSA": "Under review following gut microbiome disruption research"
+      },
+      "healthEffects": [
+        { "type": "Gut Microbiome", "effect": "Chassaing et al. Nature 2015: disrupts intestinal microbiota and promotes low-grade inflammation in mice" },
+        { "type": "Metabolic Syndrome", "effect": "Promotes obesity and metabolic syndrome features in animal models at concentrations used in food" },
+        { "type": "Intestinal Permeability", "effect": "May increase gut barrier permeability, allowing bacterial translocation and triggering immune activation" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Polysorbate-80",
+        "https://www.nature.com/articles/nature14232",
+        "https://www.efsa.europa.eu/en/efsajournal/pub/4660"
+      ]
+    },
+    {
+      "id": "carboxymethyl_cellulose",
+      "name": "Carboxymethyl Cellulose",
+      "aliases": ["CMC", "E466", "cellulose gum"],
+      "category": "Thickener / Stabilizer",
+      "riskLevel": "Moderate",
+      "description": "CMC is a synthetic cellulose derivative widely used as a thickener. The same 2015 Nature study that flagged polysorbate 80 also showed CMC disrupts gut microbiome and promotes intestinal inflammation.",
+      "toxicity": { "acute": "Low", "chronic": "Moderate" },
+      "regulatoryStatus": {
+        "FDA": "Generally Recognized as Safe (GRAS)",
+        "EU": "Approved (E466); under review",
+        "EFSA": "Gut microbiome effects under review"
+      },
+      "healthEffects": [
+        { "type": "Gut Microbiome", "effect": "Chassaing et al. Nature 2015: alters microbiota composition and promotes colitis in mouse models" },
+        { "type": "Inflammation", "effect": "Promotes low-grade intestinal inflammation at dietary concentrations in genetically susceptible mice" },
+        { "type": "Metabolic", "effect": "Linked to increased adiposity and metabolic dysfunction in animal models alongside microbiome disruption" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Carboxymethylcellulose",
+        "https://www.nature.com/articles/nature14232",
+        "https://www.efsa.europa.eu/en/efsajournal/pub/4144"
+      ]
+    },
+    {
+      "id": "calcium_propionate",
+      "name": "Calcium Propionate",
+      "aliases": ["E282"],
+      "category": "Preservative",
+      "riskLevel": "Moderate",
+      "description": "Calcium propionate is a mold inhibitor widely used in bread and baked goods. Clinical studies have linked it to behavioral and sleep disturbances in children.",
+      "toxicity": { "acute": "Low", "chronic": "Moderate" },
+      "regulatoryStatus": {
+        "FDA": "Generally Recognized as Safe (GRAS)",
+        "EU": "Approved (E282) with quantity limits",
+        "Australia/NZ": "Approved with labeling requirement"
+      },
+      "healthEffects": [
+        { "type": "Behavioral", "effect": "Double-blind Australian study (2002) linked propionic acid to irritability, restlessness, and sleep disturbances in children" },
+        { "type": "Neurological", "effect": "Propionic acid is a short-chain fatty acid that crosses the blood-brain barrier; elevated brain levels affect neurotransmitter balance" },
+        { "type": "Migraines", "effect": "May trigger migraines in sensitive individuals due to vasodilatory effects of propionate" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Calcium-propionate",
+        "https://www.ncbi.nlm.nih.gov/pubmed/11945023",
+        "https://www.efsa.europa.eu/en/efsajournal/pub/3779"
+      ]
+    },
+    {
+      "id": "sulfur_dioxide",
+      "name": "Sulfur Dioxide",
+      "aliases": ["E220", "SO2", "sulfite"],
+      "category": "Preservative / Antioxidant",
+      "riskLevel": "Moderate",
+      "description": "Sulfur dioxide and sulfites are widely used preservatives. They are known triggers for asthma and can cause anaphylaxis in sulfite-sensitive individuals. FDA mandates labeling when levels exceed 10ppm.",
+      "toxicity": { "acute": "Moderate", "chronic": "Low" },
+      "regulatoryStatus": {
+        "FDA": "Approved; mandatory labeling required above 10ppm",
+        "EU": "Approved (E220) with ADI of 0.7mg/kg body weight",
+        "Australia/NZ": "Approved with mandatory labeling"
+      },
+      "healthEffects": [
+        { "type": "Asthma", "effect": "Known trigger for asthma attacks; estimated 5-10% of asthmatics are sulfite-sensitive" },
+        { "type": "Anaphylaxis", "effect": "Can cause life-threatening anaphylaxis in approximately 1% of the general population" },
+        { "type": "Neurological", "effect": "Sulfite oxidase enzyme deficiency (rare) leads to severe neurological damage with dietary sulfite exposure" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Sulfur-dioxide",
+        "https://www.fda.gov/food/food-additives-petitions/sulfites",
+        "https://www.efsa.europa.eu/en/efsajournal/pub/4700"
+      ]
+    },
+    {
+      "id": "methyl_paraben",
+      "name": "Methylparaben",
+      "aliases": ["E218", "methyl 4-hydroxybenzoate"],
+      "category": "Preservative",
+      "riskLevel": "Moderate",
+      "description": "Methylparaben is a preservative that exhibits weak estrogenic activity. It has been detected in human breast tumor tissue, raising concerns about its potential role in estrogen-sensitive cancers.",
+      "toxicity": { "acute": "Low", "chronic": "Moderate" },
+      "regulatoryStatus": {
+        "FDA": "Generally Recognized as Safe (GRAS) for food use",
+        "EU": "Permitted (E218) in foods; restricted in cosmetics",
+        "Denmark": "Banned in cosmetics for children under 3"
+      },
+      "healthEffects": [
+        { "type": "Endocrine Disruption", "effect": "Exhibits weak estrogenic activity; binds to estrogen receptors and may disrupt hormonal signaling" },
+        { "type": "Cancer Risk", "effect": "Darbre et al. 2004: detected intact in 18 of 20 human breast tumor biopsies at measurable concentrations" },
+        { "type": "Systemic Absorption", "effect": "Rapidly absorbed through skin and gut; detectable in urine within hours of exposure" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Methylparaben",
+        "https://www.ncbi.nlm.nih.gov/pubmed/14745841",
+        "https://www.efsa.europa.eu/en/efsajournal/pub/3828"
+      ]
+    },
+    {
+      "id": "monosodium_glutamate",
+      "name": "Monosodium Glutamate",
+      "aliases": ["MSG", "E621", "glutamate"],
+      "category": "Flavor Enhancer",
+      "riskLevel": "Low",
+      "description": "MSG is a sodium salt of glutamic acid used as a flavor enhancer. While widely blamed for 'Chinese Restaurant Syndrome,' controlled double-blind studies have failed to consistently confirm this. High sodium content is the primary validated concern.",
+      "toxicity": { "acute": "Low", "chronic": "Low" },
+      "regulatoryStatus": {
+        "FDA": "Generally Recognized as Safe (GRAS)",
+        "EU": "Approved (E621) with ADI 'not specified'",
+        "WHO": "No established health-based guidance value needed"
+      },
+      "healthEffects": [
+        { "type": "MSG Symptom Complex", "effect": "Headaches, flushing, and sweating reported anecdotally; double-blind studies fail to reproduce consistently" },
+        { "type": "Sodium Content", "effect": "Contains sodium — excessive dietary sodium is linked to hypertension and cardiovascular disease" },
+        { "type": "Neurological (animal)", "effect": "Excitotoxic effects in neurons at very high experimental doses; not replicated at normal dietary intake levels" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Monosodium-glutamate",
+        "https://www.fda.gov/food/food-additives-petitions/questions-and-answers-monosodium-glutamate-msg",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5938543/"
+      ]
+    },
+    {
+      "id": "trans_fats",
+      "name": "Trans Fats",
+      "aliases": ["partially hydrogenated oils", "PHO", "artificial trans fats"],
+      "category": "Processed Fat",
+      "riskLevel": "High",
+      "description": "Artificial trans fats are created by partially hydrogenating vegetable oils. WHO estimates they cause 500,000 premature cardiovascular deaths annually. The FDA banned them in the USA in 2018.",
+      "toxicity": { "acute": "Low", "chronic": "High" },
+      "regulatoryStatus": {
+        "FDA": "Banned since June 2018; GRAS status revoked 2015",
+        "EU": "Limited to 2g per 100g fat in foods since 2021",
+        "WHO": "Calls for global elimination by 2023 (REPLACE initiative)",
+        "40+ countries": "Banned or severely restricted"
+      },
+      "healthEffects": [
+        { "type": "Cardiovascular", "effect": "Simultaneously raise LDL and lower HDL cholesterol; strongest dietary predictor of heart disease" },
+        { "type": "Mortality", "effect": "WHO estimates artificial trans fats cause 500,000 premature cardiovascular deaths per year globally" },
+        { "type": "Systemic Inflammation", "effect": "Promote systemic inflammation by activating inflammatory pathways in endothelial cells" }
+      ],
+      "references": [
+        "https://www.who.int/news-room/detail/14-05-2018-who-plan-to-eliminate-industrially-produced-trans-fatty-acids-from-global-food-supply",
+        "https://www.fda.gov/food/food-additives-petitions/final-determination-regarding-partially-hydrogenated-oils",
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Trans-fat"
+      ]
+    },
+    {
+      "id": "acesulfame_potassium",
+      "name": "Acesulfame Potassium",
+      "aliases": ["Ace-K", "E950", "acesulfame K"],
+      "category": "Artificial Sweetener",
+      "riskLevel": "Moderate",
+      "description": "Acesulfame-K is a calorie-free sweetener 200x sweeter than sugar. Emerging research raises concerns about gut microbiome disruption and potential effects on insulin secretion.",
+      "toxicity": { "acute": "Low", "chronic": "Moderate" },
+      "regulatoryStatus": {
+        "FDA": "Approved with ADI of 15mg/kg body weight",
+        "EU": "Approved (E950) with ADI of 9mg/kg body weight",
+        "WHO": "Long-term safety data considered insufficient by some researchers"
+      },
+      "healthEffects": [
+        { "type": "Gut Microbiome", "effect": "May alter gut microbiota diversity and promote glucose intolerance in animal and human studies" },
+        { "type": "Metabolic", "effect": "May affect insulin secretion dynamics; animal studies show altered metabolic regulation" },
+        { "type": "Data Gaps", "effect": "Long-term human safety data remains limited; original approval studies considered inadequate by current standards" }
+      ],
+      "references": [
+        "https://pubchem.ncbi.nlm.nih.gov/compound/Acesulfame-potassium",
+        "https://www.efsa.europa.eu/en/efsajournal/pub/2089",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5868412/"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,351 @@
+/* ══════════════════════════════════════════
+   CLARIVANA — BIOTECH FEATURES STYLESHEET
+   Add: <link rel="stylesheet" href="clarivana-biotech.css">
+   ══════════════════════════════════════════ */
+
+/* ── Panel wrapper ── */
+.cv-biotech-panel {
+  font-family: 'Courier New', 'Consolas', monospace;
+  color: #e8e8e0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Score Header ── */
+.cv-score-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid #1D9E75;
+  border-radius: 12px;
+  background: rgba(29, 158, 117, 0.05);
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.cv-score-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.cv-grade {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -1px;
+  flex-shrink: 0;
+}
+
+.cv-product-risk {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.cv-product-sub {
+  font-size: 11px;
+  color: rgba(255,255,255,0.45);
+  margin-top: 2px;
+  letter-spacing: 0.5px;
+}
+
+.cv-score-bar-wrap {
+  flex: 1;
+  min-width: 140px;
+}
+
+.cv-score-bar {
+  height: 6px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.cv-score-fill {
+  height: 100%;
+  border-radius: 100px;
+  transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cv-score-ticks {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  font-size: 9px;
+  color: rgba(255,255,255,0.25);
+  letter-spacing: 0.5px;
+}
+
+/* ── Sections ── */
+.cv-section {
+  margin-bottom: 16px;
+  padding: 14px 16px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+}
+
+.cv-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 14px;
+}
+
+/* ── Body Map ── */
+.cv-body-map {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.cv-body-svg {
+  width: 160px;
+  height: 160px;
+}
+
+@keyframes organ-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.cv-organ-pulse {
+  animation: organ-pulse 1.8s ease-in-out infinite;
+}
+
+.cv-systems-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+.cv-system-tag {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: rgba(226, 75, 74, 0.15);
+  border: 1px solid rgba(226, 75, 74, 0.35);
+  color: #E24B4A;
+}
+
+/* ── Ingredient Cards ── */
+.cv-ing-card {
+  border-left: 3px solid #E24B4A;
+  padding: 12px 12px 10px 14px;
+  margin-bottom: 10px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 0 8px 8px 0;
+}
+
+.cv-ing-card:last-child { margin-bottom: 0; }
+
+.cv-ing-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2px;
+}
+
+.cv-ing-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #e8e8e0;
+  letter-spacing: 0.3px;
+}
+
+.cv-ing-score {
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.cv-ing-score span {
+  font-size: 10px;
+  font-weight: 400;
+  opacity: 0.5;
+}
+
+.cv-ing-risk {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.cv-ing-effects {
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.cv-effect {
+  margin-bottom: 1px;
+}
+
+.cv-ing-systems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.cv-sys-badge {
+  font-size: 9px;
+  letter-spacing: 1px;
+  padding: 2px 8px;
+  border-radius: 100px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+}
+
+.cv-clean {
+  font-size: 13px;
+  color: #1D9E75;
+  padding: 10px;
+  text-align: center;
+}
+
+/* ── Exposure Tracker ── */
+.cv-exposure-summary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.cv-exp-stat {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.cv-exp-stat.cv-exp-danger {
+  border-color: rgba(226,75,74,0.3);
+  background: rgba(226,75,74,0.06);
+}
+
+.cv-exp-num {
+  font-size: 24px;
+  font-weight: 900;
+  color: #e8e8e0;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.cv-exp-label {
+  font-size: 10px;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+}
+
+.cv-exposure-warning {
+  font-size: 11px;
+  color: #EF9F27;
+  background: rgba(239,159,39,0.08);
+  border: 1px solid rgba(239,159,39,0.2);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.cv-exposure-warning strong {
+  color: #E24B4A;
+}
+
+.cv-exposure-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.cv-exp-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cv-exp-name {
+  font-size: 10px;
+  color: rgba(255,255,255,0.5);
+  width: 120px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: 0.3px;
+}
+
+.cv-exp-bar-wrap {
+  flex: 1;
+  height: 4px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.cv-exp-bar-fill {
+  height: 100%;
+  border-radius: 100px;
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cv-exp-count {
+  font-size: 10px;
+  font-weight: 700;
+  width: 24px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.cv-exposure-empty {
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+  text-align: center;
+  padding: 10px;
+  font-style: italic;
+}
+
+.cv-clear-btn {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: none;
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.3);
+  border-radius: 100px;
+  padding: 5px 14px;
+  cursor: pointer;
+  transition: all 0.15s;
+  display: block;
+  margin: 0 auto;
+  font-family: inherit;
+}
+
+.cv-clear-btn:hover {
+  border-color: rgba(226,75,74,0.4);
+  color: #E24B4A;
+}
